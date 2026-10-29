@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #0a1f44;
+  --color-navy-deep: #061428;
+  --color-navy-mid: #12305f;
+  --color-copper: #d97e4a;
+  --color-copper-deep: #b05b2e;
+  --color-silver: #c8cdd4;
+  --color-cream: #f5f7fa;
+  --color-ink: #e8eef7;
+  --color-muted: rgb(232 238 247 / 0.68);
+  --color-faint: rgb(232 238 247 / 0.45);
+  --color-hairline: rgb(232 238 247 / 0.14);
+  --color-whatsapp: #25d366;
+  --color-whatsapp-deep: #1ebe57;
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .wa-pulse {
+      animation: none !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-navy-deep);
+    color: var(--color-ink);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgb(217 126 74 / 0.4);
+    color: var(--color-cream);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-copper);
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .container-reman {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1120px;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-reman {
+      padding-inline: 2rem;
+    }
+  }
+
+  .metal-grid {
+    background-image:
+      linear-gradient(rgb(232 238 247 / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(232 238 247 / 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .copper-rule {
+    height: 1px;
+    width: 100%;
+    max-width: 12rem;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgb(217 126 74 / 0.75) 40%,
+      rgb(192 205 212 / 0.45) 70%,
+      transparent 100%
+    );
+  }
+
+  .wa-pulse {
+    animation: wa-pulse 2.4s ease-in-out infinite;
+  }
+}
+
+@keyframes wa-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(37 211 102 / 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgb(37 211 102 / 0);
+  }
+}

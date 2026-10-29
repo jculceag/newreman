@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NEW REMAN">
+  <circle cx="32" cy="32" r="30" fill="#0A1F44"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#F5F7FA" stroke-width="3"/>
+  <circle cx="32" cy="28" r="10" fill="#D97E4A"/>
+  <rect x="24" y="36" width="16" height="12" rx="2" fill="#C8CDD4"/>
+  <circle cx="28" cy="26" r="2.2" fill="#0A1F44"/>
+  <circle cx="36" cy="26" r="2.2" fill="#0A1F44"/>
+</svg>
