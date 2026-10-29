@@ -21,8 +21,8 @@ export function Contact() {
         <Reveal>
           <SectionHeading
             eyebrow="Contato"
-            title="Fale com a bancada"
-            description={`Orçamento direto com ${WHATSAPP_CONTACT_NAME} no WhatsApp. Se preferir, ligue, mande e-mail ou venha na Vila Romana.`}
+            title="Chama a gente"
+            description={`Fala com o ${WHATSAPP_CONTACT_NAME} no WhatsApp. Se preferir, liga, manda e-mail ou passa na Vila Romana.`}
           />
         </Reveal>
 
@@ -33,14 +33,16 @@ export function Contact() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 border border-signal/30 bg-signal/10 p-4 transition-colors hover:bg-signal/15"
+                className="flex items-center gap-4 rounded-md border border-signal/30 bg-signal/10 p-4 transition-colors hover:bg-signal/15"
               >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center bg-signal text-steel">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-signal text-steel">
                   <WhatsAppIcon className="h-6 w-6" />
                 </span>
                 <span>
-                  <span className="stamp block text-signal">WhatsApp</span>
-                  <span className="mt-1 block font-display text-lg font-semibold text-chalk">
+                  <span className="block text-sm font-medium text-signal">
+                    WhatsApp
+                  </span>
+                  <span className="mt-1 block text-lg font-semibold text-chalk">
                     {WHATSAPP_CONTACT_NAME}
                   </span>
                   <span className="block text-sm text-muted">
@@ -50,8 +52,8 @@ export function Contact() {
               </a>
 
               <div className="grid gap-4 sm:grid-cols-2">
-                <div className="panel-inset p-4">
-                  <p className="stamp text-faint">Telefone</p>
+                <div className="panel-inset rounded-md p-4">
+                  <p className="text-xs text-faint">Telefone</p>
                   <a
                     href={`tel:${PHONE_TEL}`}
                     className="mt-2 block text-chalk hover:text-copper"
@@ -59,8 +61,8 @@ export function Contact() {
                     {PHONE_DISPLAY}
                   </a>
                 </div>
-                <div className="panel-inset p-4">
-                  <p className="stamp text-faint">E-mail</p>
+                <div className="panel-inset rounded-md p-4">
+                  <p className="text-xs text-faint">E-mail</p>
                   <a
                     href={`mailto:${EMAIL}`}
                     className="mt-2 block break-all text-chalk hover:text-copper"
@@ -68,8 +70,8 @@ export function Contact() {
                     {EMAIL}
                   </a>
                 </div>
-                <div className="panel-inset p-4 sm:col-span-2">
-                  <p className="stamp text-faint">Endereço</p>
+                <div className="panel-inset rounded-md p-4 sm:col-span-2">
+                  <p className="text-xs text-faint">Endereço</p>
                   <a
                     href={MAPS_URL}
                     target="_blank"
@@ -79,8 +81,8 @@ export function Contact() {
                     {ADDRESS.full}
                   </a>
                 </div>
-                <div className="panel-inset p-4 sm:col-span-2">
-                  <p className="stamp text-faint">Horário</p>
+                <div className="panel-inset rounded-md p-4 sm:col-span-2">
+                  <p className="text-xs text-faint">Horário</p>
                   <p className="mt-2 text-chalk">{HOURS}</p>
                 </div>
               </div>
@@ -88,14 +90,14 @@ export function Contact() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="overflow-hidden border border-hairline bg-steel-panel">
+            <div className="overflow-hidden rounded-md border border-hairline bg-steel-panel">
               <div className="flex items-center justify-between border-b border-hairline px-4 py-3">
-                <p className="stamp text-faint">Mapa · Vila Romana</p>
+                <p className="text-sm text-faint">Mapa · Vila Romana</p>
                 <a
                   href={MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="stamp text-copper hover:text-copper-hot"
+                  className="text-sm font-medium text-copper hover:text-copper-hot"
                 >
                   Abrir no Maps
                 </a>

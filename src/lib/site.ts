@@ -1,4 +1,4 @@
-/** Contatos e conteúdo institucional da NEW REMAN. */
+/** Contatos e conteúdo da NEW REMAN. */
 
 export const SITE_NAME = "NEW REMAN";
 export const SITE_TAGLINE = "Recuperadora de Peças Elétricas Automotivas";
@@ -7,7 +7,7 @@ export const WHATSAPP_E164 = "5511940363315";
 export const WHATSAPP_DISPLAY = "(11) 94036-3315";
 export const WHATSAPP_CONTACT_NAME = "Nelson Culceag";
 export const WHATSAPP_PREFILL =
-  "Olá, Nelson! Sou de uma oficina e gostaria de solicitar um orçamento de peça remanufaturada.";
+  "Oi Nelson! Sou de uma oficina e queria orçamento de peça recuperada.";
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_E164}?text=${encodeURIComponent(WHATSAPP_PREFILL)}`;
 
@@ -31,78 +31,73 @@ export const MAPS_QUERY = encodeURIComponent(
 export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${MAPS_QUERY}`;
 export const MAPS_EMBED_URL = `https://www.google.com/maps?q=${MAPS_QUERY}&output=embed`;
 
-export const HOURS = "Segunda a sexta · 8h às 18h";
+export const HOURS = "Segunda a sexta, das 8h às 18h";
 
 export const WARRANTY_MONTHS = 3;
 
 export const PRODUCTS = [
   {
     id: "partida",
-    code: "MP-01",
     name: "Motor de Partida",
-    blurb: "Desmontagem, troca de componentes críticos e teste de torque.",
+    blurb: "A gente abre, troca o que precisa e testa pra pegar de primeira.",
   },
   {
     id: "alternador",
-    code: "AL-02",
     name: "Alternador",
-    blurb: "Regulador, escovas e rolamentos revisados. Carga estável na bancada.",
+    blurb: "Revisa o que gasta, monta de novo e entrega carregando direito.",
   },
   {
     id: "ventoinha",
-    code: "VT-03",
     name: "Ventoinha",
-    blurb: "Recuperação de motor de ventoinha com atenção a ruído e engate.",
+    blurb: "Recupera o motor pra rodar quieto e sem surpresa no serviço.",
   },
   {
     id: "seta",
-    code: "CS-04",
     name: "Chave de Seta",
-    blurb: "Contatos e mecanismos recuperados para retorno firme.",
+    blurb: "Conserta o retorno e os contatos pra funcionar como deve.",
   },
   {
     id: "limpador",
-    code: "LP-05",
     name: "Limpador de Parabrisas",
-    blurb: "Motor de limpador remanufaturado para o fluxo diário da oficina.",
+    blurb: "Motor recuperado pra você não perder tempo com o carro do cliente.",
   },
 ] as const;
 
 export const PROCESS_STEPS = [
   {
-    step: "01",
-    title: "Recebimento",
-    body: "A peça chega da oficina. Identificamos aplicação, modelo e condição.",
+    step: "1",
+    title: "Você manda a peça",
+    body: "A gente recebe, confere o modelo e vê o estado dela.",
   },
   {
-    step: "02",
-    title: "Diagnóstico",
-    body: "Abrimos, limpamos e separamos o que vale recuperar do que precisa trocar.",
+    step: "2",
+    title: "Abrimos e olhamos tudo",
+    body: "Limpamos, separamos o que presta e o que tem que trocar.",
   },
   {
-    step: "03",
-    title: "Remanufatura",
-    body: "Montagem com critério técnico. Sem gambiarra, sem peça no escuro.",
+    step: "3",
+    title: "Recuperamos",
+    body: "Montamos de novo com cuidado. Sem gambiarra.",
   },
   {
-    step: "04",
-    title: "Teste e entrega",
-    body: "Bancada de teste, garantia de 3 meses e peça pronta para aplicar.",
+    step: "4",
+    title: "Testamos e devolvemos",
+    body: "Testamos na bancada, colocamos 3 meses de garantia e você aplica.",
   },
 ] as const;
 
 export const BENEFITS = [
   {
-    title: "Preço de reman, padrão de bancada",
-    body: "Custo que a oficina consegue vender. Qualidade que não volta amanhã.",
+    title: "Preço que fecha",
+    body: "Mais em conta que peça nova, com qualidade pra você confiar no serviço.",
   },
   {
-    title: "Prazo pensado no serviço",
-    body: "O carro do seu cliente não pode esperar. Priorizamos o fluxo da oficina.",
+    title: "Prazo de quem tem carro na rampa",
+    body: "A gente sabe que o cliente não pode esperar. Trabalhamos pra te devolver rápido.",
   },
   {
-    title: "Canal direto B2B",
-    body: "WhatsApp com o Nelson. Orçamento rápido, sem formulário e sem enrolação.",
+    title: "Fala direto no WhatsApp",
+    body: "Chama o Nelson, manda foto da peça e já pede o orçamento. Sem enrolação.",
   },
 ] as const;
 
@@ -110,21 +105,21 @@ export const PROOFS = [
   {
     label: "Garantia",
     value: `${WARRANTY_MONTHS} meses`,
-    hint: "padrão na reman",
+    hint: "na peça recuperada",
   },
   {
-    label: "Foco",
+    label: "O que a gente faz",
     value: "Elétrica",
-    hint: "partida · alternador · mais",
+    hint: "partida, alternador e mais",
   },
   {
-    label: "Canal",
-    value: "B2B",
-    hint: "oficinas e auto elétricas",
+    label: "Pra quem",
+    value: "Oficinas",
+    hint: "e auto elétricas",
   },
   {
-    label: "Base",
-    value: "SP",
-    hint: "Vila Romana · Lapa",
+    label: "Onde",
+    value: "São Paulo",
+    hint: "Vila Romana",
   },
 ] as const;

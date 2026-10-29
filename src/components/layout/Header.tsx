@@ -52,7 +52,7 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="stamp text-faint transition-colors hover:text-chalk"
+              className="text-sm text-faint transition-colors hover:text-chalk"
             >
               {item.label}
             </a>
@@ -63,7 +63,7 @@ export function Header() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 border border-signal/40 bg-signal px-3.5 py-2 text-sm font-semibold text-steel transition-colors hover:bg-signal-deep"
+          className="inline-flex items-center gap-2 rounded-md border border-signal/40 bg-signal px-3.5 py-2 text-sm font-semibold text-steel transition-colors hover:bg-signal-deep"
         >
           <WhatsAppIcon className="h-4 w-4" />
           <span className="hidden sm:inline">Orçamento</span>

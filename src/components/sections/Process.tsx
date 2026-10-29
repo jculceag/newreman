@@ -11,27 +11,20 @@ export function Process() {
       <div className="container-reman">
         <Reveal>
           <SectionHeading
-            eyebrow="Processo reman"
-            title="Da peça usada à peça pronta"
-            description="Fluxo de remanufatura pensado pra oficina: diagnóstico claro, recuperação técnica e teste antes de devolver."
+            eyebrow="Como funciona"
+            title="Da peça usada até a peça pronta"
+            description="Simples: você manda, a gente recupera, testa e devolve com garantia."
           />
         </Reveal>
 
         <ol className="relative mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          <div
-            className="absolute top-[2.15rem] right-8 left-8 hidden h-px bg-gradient-to-r from-copper/0 via-copper/50 to-copper/0 xl:block"
-            aria-hidden
-          />
           {PROCESS_STEPS.map((step, index) => (
             <Reveal key={step.step} as="li" delay={index * 0.05}>
               <article className="panel relative h-full p-6">
-                <div className="flex items-center justify-between gap-3">
-                  <span className="font-display text-3xl font-semibold tracking-tight text-copper">
-                    {step.step}
-                  </span>
-                  <span className="h-2.5 w-2.5 rounded-full border border-copper bg-copper/30" />
-                </div>
-                <h3 className="mt-6 font-display text-lg font-semibold tracking-wide text-chalk uppercase">
+                <span className="font-display text-3xl font-semibold text-copper">
+                  {step.step}
+                </span>
+                <h3 className="mt-5 font-display text-lg font-semibold text-chalk">
                   {step.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -43,15 +36,15 @@ export function Process() {
         </ol>
 
         <Reveal delay={0.12}>
-          <div className="mt-10 flex flex-col gap-4 border border-copper/40 bg-gradient-to-r from-copper/15 via-copper/5 to-transparent px-6 py-5 md:flex-row md:items-center md:justify-between">
+          <div className="mt-10 flex flex-col gap-3 border border-copper/40 bg-gradient-to-r from-copper/15 via-copper/5 to-transparent px-6 py-5 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="stamp text-copper">Garantia padrão</p>
-              <p className="mt-2 font-display text-2xl font-semibold tracking-wide text-chalk uppercase">
-                {WARRANTY_MONTHS} meses na peça remanufaturada
+              <p className="text-sm font-medium text-copper">Garantia</p>
+              <p className="mt-1 font-display text-2xl font-semibold text-chalk">
+                {WARRANTY_MONTHS} meses na peça recuperada
               </p>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-muted">
-              Segurança pra oficina fechar o serviço sem medo de retorno.
+              Assim você fecha o serviço do cliente sem ficar na mão.
             </p>
           </div>
         </Reveal>

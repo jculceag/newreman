@@ -8,9 +8,9 @@ export function ForWorkshops() {
       <div className="container-reman">
         <Reveal>
           <SectionHeading
-            eyebrow="Pra oficina"
-            title="Parceiro de bancada, não só fornecedor"
-            description="Quem vive de serviço precisa de peça boa, preço que fecha e resposta rápida. É nisso que a NEW REMAN trabalha."
+            eyebrow="Pra quem tem oficina"
+            title="A gente entende o corre do dia a dia"
+            description="Peça boa, preço justo e resposta rápida. É isso que a NEW REMAN entrega pra você."
           />
         </Reveal>
 
@@ -19,8 +19,7 @@ export function ForWorkshops() {
             <Reveal key={benefit.title} as="li" delay={index * 0.05}>
               <article className="panel h-full p-6 md:p-7">
                 <div className="copper-edge mb-5 h-px w-16" aria-hidden />
-                <p className="stamp text-faint">0{index + 1}</p>
-                <h3 className="mt-3 font-display text-xl font-semibold tracking-wide text-chalk uppercase">
+                <h3 className="font-display text-xl font-semibold text-chalk">
                   {benefit.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">

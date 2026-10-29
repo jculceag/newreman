@@ -10,7 +10,7 @@ export function WhatsAppFab() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`WhatsApp com ${WHATSAPP_CONTACT_NAME}`}
-      className="signal-pulse fixed right-4 bottom-4 z-50 flex h-14 w-14 items-center justify-center bg-signal text-steel shadow-[0_12px_40px_rgba(0,0,0,0.45)] transition-transform hover:scale-105 hover:bg-signal-deep md:right-6 md:bottom-6"
+      className="signal-pulse fixed right-4 bottom-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-signal text-steel shadow-[0_12px_40px_rgba(0,0,0,0.45)] transition-transform hover:scale-105 hover:bg-signal-deep md:right-6 md:bottom-6"
     >
       <WhatsAppIcon className="h-7 w-7" />
     </a>

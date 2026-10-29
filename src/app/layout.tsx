@@ -25,7 +25,7 @@ const body = DM_Sans({
 const siteUrl = getSiteUrl();
 const title = `${SITE_NAME} | ${SITE_TAGLINE}`;
 const description =
-  "Recuperadora de peças elétricas automotivas para oficinas em São Paulo. Motor de partida, alternador, ventoinha e mais, com garantia de 3 meses.";
+  "Recuperamos peças elétricas pra oficinas em São Paulo: motor de partida, alternador, ventoinha e mais, com garantia de 3 meses.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

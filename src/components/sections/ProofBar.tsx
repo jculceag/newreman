@@ -11,8 +11,8 @@ export function ProofBar() {
             delay={index * 0.04}
             className="px-5 py-7 md:px-7"
           >
-            <p className="stamp text-copper">{item.label}</p>
-            <p className="mt-2 font-display text-2xl font-semibold tracking-wide text-chalk uppercase md:text-3xl">
+            <p className="text-xs font-medium text-copper">{item.label}</p>
+            <p className="mt-2 font-display text-2xl font-semibold text-chalk md:text-3xl">
               {item.value}
             </p>
             <p className="mt-1 text-sm text-faint">{item.hint}</p>

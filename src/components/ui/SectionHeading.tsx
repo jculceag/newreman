@@ -11,11 +11,8 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className="max-w-3xl">
-      <div className="flex items-center gap-3">
-        <span className="h-px w-8 bg-copper" aria-hidden />
-        <p className="stamp text-copper">{eyebrow}</p>
-      </div>
-      <h2 className="mt-4 font-display text-[clamp(1.85rem,4vw,2.85rem)] leading-[1.05] font-semibold tracking-tight text-chalk uppercase">
+      <p className="text-sm font-medium tracking-wide text-copper">{eyebrow}</p>
+      <h2 className="mt-3 font-display text-[clamp(1.75rem,3.8vw,2.6rem)] leading-[1.1] font-semibold tracking-tight text-chalk">
         {title}
       </h2>
       {description ? (
