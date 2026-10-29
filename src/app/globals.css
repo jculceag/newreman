@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-navy: #0a1f44;
-  --color-navy-deep: #061428;
-  --color-navy-mid: #12305f;
-  --color-copper: #d97e4a;
-  --color-copper-deep: #b05b2e;
-  --color-silver: #c8cdd4;
-  --color-cream: #f5f7fa;
-  --color-ink: #e8eef7;
-  --color-muted: rgb(232 238 247 / 0.68);
-  --color-faint: rgb(232 238 247 / 0.45);
-  --color-hairline: rgb(232 238 247 / 0.14);
-  --color-whatsapp: #25d366;
-  --color-whatsapp-deep: #1ebe57;
+  --color-steel: #0c1118;
+  --color-steel-raised: #141b24;
+  --color-steel-panel: #1a2330;
+  --color-steel-edge: #2a3545;
+  --color-copper: #e08a4a;
+  --color-copper-hot: #f0a05c;
+  --color-copper-deep: #b45a28;
+  --color-alloy: #9aa7b8;
+  --color-chalk: #f3f6fa;
+  --color-ink: #dce3ee;
+  --color-muted: rgb(220 227 238 / 0.72);
+  --color-faint: rgb(220 227 238 / 0.48);
+  --color-hairline: rgb(220 227 238 / 0.12);
+  --color-signal: #25d366;
+  --color-signal-deep: #1da851;
 
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
@@ -38,13 +40,14 @@
       transition-duration: 0.01ms !important;
     }
 
-    .wa-pulse {
+    .signal-pulse,
+    .scan-line {
       animation: none !important;
     }
   }
 
   body {
-    background-color: var(--color-navy-deep);
+    background-color: var(--color-steel);
     color: var(--color-ink);
     font-family: var(--font-sans), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -52,8 +55,8 @@
   }
 
   ::selection {
-    background: rgb(217 126 74 / 0.4);
-    color: var(--color-cream);
+    background: rgb(224 138 74 / 0.35);
+    color: var(--color-chalk);
   }
 
   :focus-visible {
@@ -66,7 +69,7 @@
   .container-reman {
     margin-inline: auto;
     width: 100%;
-    max-width: 1120px;
+    max-width: 1180px;
     padding-inline: 1.25rem;
   }
 
@@ -76,37 +79,89 @@
     }
   }
 
-  .metal-grid {
-    background-image:
-      linear-gradient(rgb(232 238 247 / 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgb(232 238 247 / 0.04) 1px, transparent 1px);
-    background-size: 48px 48px;
+  .stamp {
+    font-family: var(--font-display), system-ui, sans-serif;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    font-weight: 600;
   }
 
-  .copper-rule {
-    height: 1px;
-    width: 100%;
-    max-width: 12rem;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      rgb(217 126 74 / 0.75) 40%,
-      rgb(192 205 212 / 0.45) 70%,
-      transparent 100%
+  .panel {
+    border: 1px solid var(--color-hairline);
+    background:
+      linear-gradient(180deg, rgb(26 35 48 / 0.92), rgb(20 27 36 / 0.88));
+  }
+
+  .panel-inset {
+    border: 1px solid rgb(220 227 238 / 0.08);
+    background: rgb(12 17 24 / 0.55);
+  }
+
+  .metal-rail {
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 11px,
+        rgb(220 227 238 / 0.035) 11px,
+        rgb(220 227 238 / 0.035) 12px
+      );
+  }
+
+  .diag-hatch {
+    background-image: repeating-linear-gradient(
+      -32deg,
+      transparent,
+      transparent 10px,
+      rgb(224 138 74 / 0.035) 10px,
+      rgb(224 138 74 / 0.035) 11px
     );
   }
 
-  .wa-pulse {
-    animation: wa-pulse 2.4s ease-in-out infinite;
+  .copper-edge {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-copper) 20%,
+      var(--color-copper-hot) 50%,
+      var(--color-alloy) 80%,
+      transparent
+    );
+  }
+
+  .signal-pulse {
+    animation: signal-pulse 2.6s ease-in-out infinite;
+  }
+
+  .scan-line {
+    animation: scan-line 7s linear infinite;
   }
 }
 
-@keyframes wa-pulse {
+@keyframes signal-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgb(37 211 102 / 0.45);
+    box-shadow: 0 0 0 0 rgb(37 211 102 / 0.4);
   }
   70% {
-    box-shadow: 0 0 0 14px rgb(37 211 102 / 0);
+    box-shadow: 0 0 0 16px rgb(37 211 102 / 0);
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.35;
+  }
+  85% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(220%);
+    opacity: 0;
   }
 }

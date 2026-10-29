@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import {
   ADDRESS,
@@ -18,92 +19,91 @@ export function Contact() {
     <section id="contato" className="scroll-mt-24 pb-24 md:pb-32">
       <div className="container-reman">
         <Reveal>
-          <p className="text-xs font-semibold tracking-[0.24em] text-copper uppercase">
-            Contato
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-cream uppercase md:text-4xl">
-            Fale com a NEW REMAN
-          </h2>
-          <p className="mt-4 max-w-2xl text-muted">
-            Orçamento rápido no WhatsApp com {WHATSAPP_CONTACT_NAME}. Se
-            preferir, ligue ou mande e-mail.
-          </p>
+          <SectionHeading
+            eyebrow="Contato"
+            title="Fale com a bancada"
+            description={`Orçamento direto com ${WHATSAPP_CONTACT_NAME} no WhatsApp. Se preferir, ligue, mande e-mail ou venha na Vila Romana.`}
+          />
         </Reveal>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="mt-12 grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
           <Reveal>
-            <div className="space-y-5 rounded-2xl border border-hairline bg-navy/45 p-6 md:p-8">
+            <div className="panel flex h-full flex-col gap-5 p-6 md:p-8">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 rounded-xl bg-whatsapp/10 p-4 transition-colors hover:bg-whatsapp/15"
+                className="flex items-center gap-4 border border-signal/30 bg-signal/10 p-4 transition-colors hover:bg-signal/15"
               >
-                <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-whatsapp text-navy-deep">
-                  <WhatsAppIcon className="h-5 w-5" />
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center bg-signal text-steel">
+                  <WhatsAppIcon className="h-6 w-6" />
                 </span>
                 <span>
-                  <span className="block text-sm font-semibold text-cream">
-                    WhatsApp · {WHATSAPP_CONTACT_NAME}
+                  <span className="stamp block text-signal">WhatsApp</span>
+                  <span className="mt-1 block font-display text-lg font-semibold text-chalk">
+                    {WHATSAPP_CONTACT_NAME}
                   </span>
-                  <span className="mt-0.5 block text-sm text-muted">
+                  <span className="block text-sm text-muted">
                     {WHATSAPP_DISPLAY}
                   </span>
                 </span>
               </a>
 
-              <div className="space-y-3 text-sm">
-                <p>
-                  <span className="block text-xs tracking-[0.18em] text-faint uppercase">
-                    Telefone
-                  </span>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="panel-inset p-4">
+                  <p className="stamp text-faint">Telefone</p>
                   <a
                     href={`tel:${PHONE_TEL}`}
-                    className="mt-1 inline-block text-cream hover:text-copper"
+                    className="mt-2 block text-chalk hover:text-copper"
                   >
                     {PHONE_DISPLAY}
                   </a>
-                </p>
-                <p>
-                  <span className="block text-xs tracking-[0.18em] text-faint uppercase">
-                    E-mail
-                  </span>
+                </div>
+                <div className="panel-inset p-4">
+                  <p className="stamp text-faint">E-mail</p>
                   <a
                     href={`mailto:${EMAIL}`}
-                    className="mt-1 inline-block text-cream hover:text-copper"
+                    className="mt-2 block break-all text-chalk hover:text-copper"
                   >
                     {EMAIL}
                   </a>
-                </p>
-                <p>
-                  <span className="block text-xs tracking-[0.18em] text-faint uppercase">
-                    Endereço
-                  </span>
+                </div>
+                <div className="panel-inset p-4 sm:col-span-2">
+                  <p className="stamp text-faint">Endereço</p>
                   <a
                     href={MAPS_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 inline-block text-cream hover:text-copper"
+                    className="mt-2 block text-chalk hover:text-copper"
                   >
                     {ADDRESS.full}
                   </a>
-                </p>
-                <p>
-                  <span className="block text-xs tracking-[0.18em] text-faint uppercase">
-                    Horário
-                  </span>
-                  <span className="mt-1 block text-cream">{HOURS}</span>
-                </p>
+                </div>
+                <div className="panel-inset p-4 sm:col-span-2">
+                  <p className="stamp text-faint">Horário</p>
+                  <p className="mt-2 text-chalk">{HOURS}</p>
+                </div>
               </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="overflow-hidden rounded-2xl border border-hairline bg-navy/30">
+            <div className="overflow-hidden border border-hairline bg-steel-panel">
+              <div className="flex items-center justify-between border-b border-hairline px-4 py-3">
+                <p className="stamp text-faint">Mapa · Vila Romana</p>
+                <a
+                  href={MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="stamp text-copper hover:text-copper-hot"
+                >
+                  Abrir no Maps
+                </a>
+              </div>
               <iframe
                 title="Mapa NEW REMAN · Rua Marco Aurélio, 518"
                 src={MAPS_EMBED_URL}
-                className="h-[320px] w-full grayscale-[20%] contrast-[1.05] md:h-full md:min-h-[380px]"
+                className="h-[340px] w-full contrast-[1.05] grayscale-[30%] md:h-[420px]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen

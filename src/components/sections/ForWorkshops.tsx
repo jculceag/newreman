@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BENEFITS } from "@/lib/site";
 
 export function ForWorkshops() {
@@ -6,23 +7,23 @@ export function ForWorkshops() {
     <section className="py-20 md:py-28">
       <div className="container-reman">
         <Reveal>
-          <p className="text-xs font-semibold tracking-[0.24em] text-copper uppercase">
-            Para oficinas
-          </p>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl font-semibold tracking-tight text-cream uppercase md:text-4xl">
-            Feito pra quem precisa de peça boa sem travar o fluxo
-          </h2>
+          <SectionHeading
+            eyebrow="Pra oficina"
+            title="Parceiro de bancada, não só fornecedor"
+            description="Quem vive de serviço precisa de peça boa, preço que fecha e resposta rápida. É nisso que a NEW REMAN trabalha."
+          />
         </Reveal>
 
-        <ul className="mt-12 grid gap-6 md:grid-cols-3">
+        <ul className="mt-12 grid gap-4 lg:grid-cols-3">
           {BENEFITS.map((benefit, index) => (
             <Reveal key={benefit.title} as="li" delay={index * 0.05}>
-              <article>
-                <div className="copper-rule mb-4" />
-                <h3 className="font-display text-xl font-semibold text-cream">
+              <article className="panel h-full p-6 md:p-7">
+                <div className="copper-edge mb-5 h-px w-16" aria-hidden />
+                <p className="stamp text-faint">0{index + 1}</p>
+                <h3 className="mt-3 font-display text-xl font-semibold tracking-wide text-chalk uppercase">
                   {benefit.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
+                <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">
                   {benefit.body}
                 </p>
               </article>

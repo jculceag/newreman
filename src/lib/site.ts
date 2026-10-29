@@ -38,66 +38,71 @@ export const WARRANTY_MONTHS = 3;
 export const PRODUCTS = [
   {
     id: "partida",
+    code: "MP-01",
     name: "Motor de Partida",
-    blurb: "Remanufatura completa para partida firme e confiável.",
+    blurb: "Desmontagem, troca de componentes críticos e teste de torque.",
   },
   {
     id: "alternador",
+    code: "AL-02",
     name: "Alternador",
-    blurb: "Carga estável, componentes revisados e testados.",
+    blurb: "Regulador, escovas e rolamentos revisados. Carga estável na bancada.",
   },
   {
     id: "ventoinha",
+    code: "VT-03",
     name: "Ventoinha",
-    blurb: "Recuperação de motores de ventoinha automotiva.",
+    blurb: "Recuperação de motor de ventoinha com atenção a ruído e engate.",
   },
   {
     id: "seta",
+    code: "CS-04",
     name: "Chave de Seta",
-    blurb: "Reparo e remanufatura com encaixe preciso.",
+    blurb: "Contatos e mecanismos recuperados para retorno firme.",
   },
   {
     id: "limpador",
+    code: "LP-05",
     name: "Limpador de Parabrisas",
-    blurb: "Motores de limpador recuperados para o dia a dia da oficina.",
+    blurb: "Motor de limpador remanufaturado para o fluxo diário da oficina.",
   },
 ] as const;
 
 export const PROCESS_STEPS = [
   {
     step: "01",
-    title: "Recebemos",
-    body: "Sua oficina envia a peça. Identificamos modelo e condição.",
+    title: "Recebimento",
+    body: "A peça chega da oficina. Identificamos aplicação, modelo e condição.",
   },
   {
     step: "02",
-    title: "Desmontamos e avaliamos",
-    body: "Abrimos, limpamos e separamos o que dá para recuperar.",
+    title: "Diagnóstico",
+    body: "Abrimos, limpamos e separamos o que vale recuperar do que precisa trocar.",
   },
   {
     step: "03",
-    title: "Recuperamos",
-    body: "Trocamos o que precisa e remontamos com critério técnico.",
+    title: "Remanufatura",
+    body: "Montagem com critério técnico. Sem gambiarra, sem peça no escuro.",
   },
   {
     step: "04",
-    title: "Testamos e entregamos",
+    title: "Teste e entrega",
     body: "Bancada de teste, garantia de 3 meses e peça pronta para aplicar.",
   },
 ] as const;
 
 export const BENEFITS = [
   {
-    title: "Custo que fecha a conta",
-    body: "Remanufaturado com qualidade de oficina, sem o preço de peça nova.",
+    title: "Preço de reman, padrão de bancada",
+    body: "Custo que a oficina consegue vender. Qualidade que não volta amanhã.",
   },
   {
-    title: "Prazo de quem vive de serviço",
-    body: "Foco em devolver a peça para a sua oficina não parar o carro do cliente.",
+    title: "Prazo pensado no serviço",
+    body: "O carro do seu cliente não pode esperar. Priorizamos o fluxo da oficina.",
   },
   {
-    title: "Suporte técnico B2B",
-    body: "Fale direto com a gente no WhatsApp. Orçamento rápido, sem enrolação.",
+    title: "Canal direto B2B",
+    body: "WhatsApp com o Nelson. Orçamento rápido, sem formulário e sem enrolação.",
   },
 ] as const;
 
@@ -105,13 +110,21 @@ export const PROOFS = [
   {
     label: "Garantia",
     value: `${WARRANTY_MONTHS} meses`,
+    hint: "padrão na reman",
   },
   {
-    label: "Linha",
-    value: "Elétrica automotiva",
+    label: "Foco",
+    value: "Elétrica",
+    hint: "partida · alternador · mais",
   },
   {
-    label: "Atendimento",
-    value: "B2B · São Paulo",
+    label: "Canal",
+    value: "B2B",
+    hint: "oficinas e auto elétricas",
+  },
+  {
+    label: "Base",
+    value: "SP",
+    hint: "Vila Romana · Lapa",
   },
 ] as const;

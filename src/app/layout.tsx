@@ -42,8 +42,11 @@ export const metadata: Metadata = {
     "São Paulo",
   ],
   icons: {
-    icon: [{ url: "/brand/favicon.svg", type: "image/svg+xml" }],
-    shortcut: "/brand/favicon.svg",
+    icon: [
+      { url: "/brand/favicon.png", type: "image/png" },
+      { url: "/brand/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/brand/favicon.png",
     apple: "/brand/new-reman-logo.png",
   },
   alternates: {
@@ -115,7 +118,7 @@ export default function RootLayout({
 
   return (
     <html lang="pt-BR" className={`${display.variable} ${body.variable}`}>
-      <body className="min-h-screen bg-navy-deep font-sans text-ink antialiased">
+      <body className="min-h-screen bg-steel font-sans text-ink antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

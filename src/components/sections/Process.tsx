@@ -1,34 +1,37 @@
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PROCESS_STEPS, WARRANTY_MONTHS } from "@/lib/site";
 
 export function Process() {
   return (
     <section
       id="processo"
-      className="scroll-mt-24 border-y border-hairline bg-navy/35 py-20 md:py-28"
+      className="scroll-mt-24 border-y border-hairline bg-steel-raised/50 py-20 md:py-28"
     >
       <div className="container-reman">
         <Reveal>
-          <p className="text-xs font-semibold tracking-[0.24em] text-copper uppercase">
-            Processo reman
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-cream uppercase md:text-4xl">
-            Da bancada até a garantia
-          </h2>
-          <p className="mt-4 max-w-2xl text-muted">
-            Cada peça passa por avaliação, recuperação e teste. Você recebe
-            pronta para aplicar, com garantia de {WARRANTY_MONTHS} meses.
-          </p>
+          <SectionHeading
+            eyebrow="Processo reman"
+            title="Da peça usada à peça pronta"
+            description="Fluxo de remanufatura pensado pra oficina: diagnóstico claro, recuperação técnica e teste antes de devolver."
+          />
         </Reveal>
 
-        <ol className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <ol className="relative mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div
+            className="absolute top-[2.15rem] right-8 left-8 hidden h-px bg-gradient-to-r from-copper/0 via-copper/50 to-copper/0 xl:block"
+            aria-hidden
+          />
           {PROCESS_STEPS.map((step, index) => (
             <Reveal key={step.step} as="li" delay={index * 0.05}>
-              <article className="h-full rounded-2xl border border-hairline bg-navy-deep/50 p-5">
-                <span className="font-display text-sm font-semibold tracking-[0.2em] text-copper">
-                  {step.step}
-                </span>
-                <h3 className="mt-3 font-display text-lg font-semibold text-cream">
+              <article className="panel relative h-full p-6">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="font-display text-3xl font-semibold tracking-tight text-copper">
+                    {step.step}
+                  </span>
+                  <span className="h-2.5 w-2.5 rounded-full border border-copper bg-copper/30" />
+                </div>
+                <h3 className="mt-6 font-display text-lg font-semibold tracking-wide text-chalk uppercase">
                   {step.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -40,17 +43,15 @@ export function Process() {
         </ol>
 
         <Reveal delay={0.12}>
-          <div className="mt-10 rounded-2xl border border-copper/35 bg-gradient-to-r from-copper/15 to-transparent px-6 py-5 md:flex md:items-center md:justify-between md:gap-6">
+          <div className="mt-10 flex flex-col gap-4 border border-copper/40 bg-gradient-to-r from-copper/15 via-copper/5 to-transparent px-6 py-5 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="font-display text-xl font-semibold tracking-wide text-cream uppercase">
-                Garantia padrão de {WARRANTY_MONTHS} meses
-              </p>
-              <p className="mt-1 text-sm text-muted">
-                Segurança pra oficina fechar o serviço com tranquilidade.
+              <p className="stamp text-copper">Garantia padrão</p>
+              <p className="mt-2 font-display text-2xl font-semibold tracking-wide text-chalk uppercase">
+                {WARRANTY_MONTHS} meses na peça remanufaturada
               </p>
             </div>
-            <p className="mt-3 text-sm font-medium text-copper md:mt-0">
-              Qualidade de reman · confiança B2B
+            <p className="max-w-sm text-sm leading-relaxed text-muted">
+              Segurança pra oficina fechar o serviço sem medo de retorno.
             </p>
           </div>
         </Reveal>

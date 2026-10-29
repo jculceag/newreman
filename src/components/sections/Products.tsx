@@ -1,34 +1,45 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { PRODUCTS } from "@/lib/site";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PRODUCTS, WHATSAPP_URL } from "@/lib/site";
 
 export function Products() {
   return (
     <section id="pecas" className="scroll-mt-24 py-20 md:py-28">
       <div className="container-reman">
         <Reveal>
-          <p className="text-xs font-semibold tracking-[0.24em] text-copper uppercase">
-            Linha elétrica
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-cream uppercase md:text-4xl">
-            Peças que a oficina pede todo dia
-          </h2>
-          <p className="mt-4 max-w-2xl text-muted">
-            Remanufatura e recuperação com foco no que mantém o serviço
-            andando. Sem catálogo infinito: o essencial, bem feito.
-          </p>
+          <SectionHeading
+            eyebrow="Linha elétrica"
+            title="O que a oficina manda recuperar"
+            description="Sem catálogo infinito. As peças que entram no fluxo real da bancada, remanufaturadas com teste e garantia."
+          />
         </Reveal>
 
-        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-12 border border-hairline">
           {PRODUCTS.map((product, index) => (
-            <Reveal key={product.id} as="li" delay={index * 0.04}>
-              <article className="group h-full rounded-2xl border border-hairline bg-navy/40 p-6 transition-colors hover:border-copper/45 hover:bg-navy-mid/35">
-                <div className="mb-4 h-1 w-10 rounded-full bg-copper/80 transition-all group-hover:w-14" />
-                <h3 className="font-display text-xl font-semibold tracking-wide text-cream">
-                  {product.name}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {product.blurb}
-                </p>
+            <Reveal key={product.id} as="li" delay={index * 0.03}>
+              <article
+                className={`group grid gap-3 px-5 py-5 transition-colors hover:bg-steel-panel/70 md:grid-cols-[7rem_1fr_auto] md:items-center md:gap-6 md:px-7 md:py-6 ${
+                  index < PRODUCTS.length - 1 ? "border-b border-hairline" : ""
+                }`}
+              >
+                <p className="stamp text-copper">{product.code}</p>
+                <div>
+                  <h3 className="font-display text-xl font-semibold tracking-wide text-chalk uppercase md:text-2xl">
+                    {product.name}
+                  </h3>
+                  <p className="mt-1 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
+                    {product.blurb}
+                  </p>
+                </div>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="stamp inline-flex w-fit items-center gap-2 text-faint transition-colors group-hover:text-copper"
+                >
+                  Orçar
+                  <span aria-hidden>→</span>
+                </a>
               </article>
             </Reveal>
           ))}
