@@ -7,7 +7,7 @@ export const WHATSAPP_E164 = "5511940363315";
 export const WHATSAPP_DISPLAY = "(11) 94036-3315";
 export const WHATSAPP_CONTACT_NAME = "Nelson Culceag";
 export const WHATSAPP_PREFILL =
-  "Oi Nelson! Sou de uma oficina e queria orçamento de peça recuperada.";
+  "Olá, vim pelo site de vocês, gostaria de mais informações...";
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_E164}?text=${encodeURIComponent(WHATSAPP_PREFILL)}`;
 
