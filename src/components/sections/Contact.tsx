@@ -103,7 +103,7 @@ export function Contact() {
                 </a>
               </div>
               <iframe
-                title="Mapa NEW REMAN · Rua Marco Aurélio, 518"
+                title="Mapa NEW REMAN · Rua Marco Aurélio, 518, Vila Romana, São Paulo"
                 src={MAPS_EMBED_URL}
                 className="h-[340px] w-full contrast-[1.05] grayscale-[30%] md:h-[420px]"
                 loading="lazy"

@@ -1,0 +1,28 @@
+{
+  "name": "NEW REMAN",
+  "short_name": "NEW REMAN",
+  "description": "Recuperadora de peças elétricas automotivas em São Paulo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c1118",
+  "theme_color": "#0c1118",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/brand/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/brand/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/brand/new-reman-logo.png",
+      "sizes": "640x640",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

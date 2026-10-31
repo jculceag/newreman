@@ -32,7 +32,7 @@ export function Header() {
       <div className="container-reman flex h-[4.25rem] items-center justify-between gap-4">
         <a href="#topo" className="group flex items-center gap-3">
           <Image
-            src="/brand/new-reman-logo.png"
+            src="/brand/new-reman-logo.webp"
             alt=""
             width={42}
             height={42}

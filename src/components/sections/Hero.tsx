@@ -39,11 +39,18 @@ export function Hero() {
             </h1>
           </Reveal>
 
-          <Reveal immediate delay={0.16}>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
+          <Reveal immediate delay={0.14}>
+            <p className="mt-3 max-w-xl text-base font-medium text-alloy md:text-lg">
+              Recuperação de motor de partida, alternador e peças elétricas em
+              São Paulo
+            </p>
+          </Reveal>
+
+          <Reveal immediate delay={0.18}>
+            <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
               A gente recupera peça elétrica pra oficina: testa, coloca garantia
-              de {WARRANTY_MONTHS} meses e te devolve pronta pra aplicar. Orçamento
-              rápido no WhatsApp.
+              de {WARRANTY_MONTHS} meses e te devolve pronta pra aplicar.
+              Orçamento rápido no WhatsApp.
             </p>
           </Reveal>
 
@@ -96,11 +103,11 @@ export function Hero() {
               aria-hidden
             />
             <Image
-              src="/brand/new-reman-logo.png"
-              alt="Mascote da NEW REMAN, peça elétrica com joinha"
+              src="/brand/new-reman-logo.webp"
+              alt="NEW REMAN: recuperação de peças elétricas automotivas em São Paulo"
               fill
               priority
-              sizes="(max-width: 1024px) 80vw, 440px"
+              sizes="(max-width: 768px) 70vw, 440px"
               className="relative z-10 object-contain drop-shadow-[0_28px_70px_rgba(0,0,0,0.5)]"
             />
           </div>
